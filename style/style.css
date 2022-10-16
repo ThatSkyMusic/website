@@ -1,0 +1,90 @@
+
+
+.container-downloads > .mdc-button {
+    margin: 5px;
+    --mdc-theme-primary: #000;
+}
+
+.mdc-top-app-bar {
+    /* --mdc-theme-primary: #143f69; */
+    --mdc-theme-primary: #143f6900;
+}
+
+.help-button {
+    color: #143f69 !important;
+}
+
+.screenshots-viewer{
+    overflow-x: auto;
+    overflow-y: hidden;
+    height: 200px;
+    white-space: nowrap;
+    width: 80%;
+    padding: 4px;
+}
+
+.screenshots-viewer > img {
+    height: 100%;
+    border-radius: 14px;
+    margin-left: 10px;
+}
+
+.container-downloads {
+    text-align:center;
+    margin-left: 10vw;
+    margin-right: 10vw;
+}
+
+.backdrop-blur {
+    backdrop-filter:blur(28px);
+}
+
+
+.android-icon {
+    color: #00a173;
+}
+
+.center{
+    text-align:center;
+    /* display:inline-block; */
+}
+
+.main {
+    display: flex; 
+    justify-content: center; 
+    align-items:center;
+    width: 100%;
+    height: 100%;
+    flex-direction: column;
+}
+
+#appicon {
+    margin: 18px;
+}
+
+.title {
+    margin: 0;
+}
+
+.slogan {
+    margin: 0px;
+    margin-bottom: 18px;
+    font-weight: 400;
+    color: #636366;
+}
+
+body, html {
+    height:100%;
+    width: 100%;
+    margin: 0%;
+}
+
+body {
+    background-image:url(../images/news-bg.jpeg);
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+    background-color: #001c37f2;
+    background-blend-mode: screen;
+    backdrop-filter:blur(2px);
+}
