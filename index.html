@@ -85,86 +85,6 @@
         }
     </style>
 
-<!--<script>
-let userPrefersDark = window.matchMedia && window.matchMedia("(prefers-color-scheme: dark)").matches;
-
-let userLanguage = navigator.language || navigator.userLanguage;
-
-let root = document.documentElement;
-
-let langElements = document.querySelectorAll("[lang]");
-
-let langDict = {
-  "APP_NAME": {
-    "en": "Sky Music",
-    "zh": "光遇音乐"
-  },
-  "APP_SLOGAN": {
-    "en": "Sky Instruments Practice Tool",
-    "zh": "光遇乐器练习工具"
-  },
-  "OTHER_DL": {
-    "en": "Download Link",
-    "zh": "下载链接"
-  },
-  "QQCHANEL": {
-    "en": "QQ Channel",
-    "zh": "QQ频道"
-  },
-  "FORUM": {
-    "en": "Enter Forum",
-    "zh": "进入论坛"
-  },
-  "HELP": {
-    "en": "Tutorial",
-    "zh": "使用教程"
-  }
-};
-
-function toggleTheme() {
-  if (root.getAttribute("data-theme") === "dark") {
-    root.setAttribute("data-theme", "light");
-    userPrefersDark = false;
-  } else {
-    root.setAttribute("data-theme", "dark");
-    userPrefersDark = true;
-  }
-}
-
-function toggleLanguage() {
-  if (userLanguage === "zh") {
-    userLanguage = "en";
-  } else {
-    userLanguage = "zh";
-  }
-
-  for (let element of langElements) {
-    let key = element.getAttribute("lang");
-    let value = langDict[key][userLanguage];
-    element.textContent = value;
-  }
-}
-
-if (userPrefersDark) {
-  root.setAttribute("data-theme", "dark");
-} else {
-  root.setAttribute("data-theme", "light");
-}
-
-if (userLanguage.startsWith("zh")) {
-  userLanguage = "zh";
-} else {
-  userLanguage = "en";
-}
-
-for (let element of langElements) {
-  let key = element.getAttribute("lang");
-  let value = langDict[key][userLanguage];
-  element.textContent = value;
-}
-</script>-->
-
-
     <!-- Global site tag (gtag.js) - Google Analytics -->
     <script async src="https://www.googletagmanager.com/gtag/js?id=G-CRCJGRJ3FB"></script>
     <script>
@@ -179,6 +99,11 @@ for (let element of langElements) {
         gtag('js', new Date());
         gtag('config', 'G-CRCJGRJ3FB');
     </script>
+    <script language="javascript">
+var lang = navigator.language || navigator.userLanguage;
+if(lang.substr(0, 3) != "zh-") location = "https://skymusic.starsriverorg.cn/en.html";
+</script>
+
 </head>
 <body>
     <noscript>You need to enable JavaScript to run this app.</noscript>
