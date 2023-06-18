@@ -63,48 +63,19 @@
         }
         .main {display: flex; justify-content: center; align-items:center;width: 
             100%;height: 100%;flex-direction: column;}
+        [data-theme="dark"] {
+            --color-primary: #143f69;
+            --color-secondary: #636366;
+            --color-background: #001c37f2;
+            --color-text: #ffffff;
+        }
+        .slogan {
+            margin: 0px;
+            margin-bottom: 18px;
+            font-weight: 400;
+            color: var(--color-secondary);
+        }
     </style>
-    <style>
-:root {
-  --color-primary: #143f69;
-  --color-secondary: #636366;
-  --color-background: #ffffff;
-  --color-text: #000000;
-}
-[data-theme="dark"] {
-  --color-primary: #143f69;
-  --color-secondary: #636366;
-  --color-background: #001c37f2;
-  --color-text: #ffffff;
-}
-.mdc-top-app-bar {
-  background-color: var(--color-primary);
-}
-.help-button {
-  color: var(--color-primary) !important;
-}
-.container-downloads > .mdc-button {
-  margin: 3px;
-  color: var(--color-text);
-}
-.title {
-  margin: 0;
-  color: var(--color-text);
-}
-.slogan {
-  margin: 0px;
-  margin-bottom: 18px;
-  font-weight: 400;
-  color: var(--color-secondary);
-}
-body {
-  background-image: url(https://thatskymusic.gitee.io/main/images/bg.webp);
-  background-repeat: no-repeat;
-  background-size: cover;
-  background-position: center;
-  background-color: var(--color-background);
-}
-</style>
 
 <script>
 let userPrefersDark = window.matchMedia && window.matchMedia("(prefers-color-scheme: dark)").matches;
