@@ -63,34 +63,108 @@
         }
         .main {display: flex; justify-content: center; align-items:center;width: 
             100%;height: 100%;flex-direction: column;}
+        [data-theme="dark"] {
+           --color-primary: #143f69;
+           --color-secondary: #636366;
+           --color-background: #001c37f2;
+           --color-text: #ffffff;
+        }
+
+        [data-theme="light"] {
+           --color-primary: #ffffff;
+           --color-secondary: #636366;
+           --color-background: #ffffff;
+           --color-text: #000000;
+        }
+
+        .slogan {
+            margin: 0px;
+            margin-bottom: 18px;
+            font-weight: 400;
+            color: var(--color-secondary);
+        }
     </style>
-    <style> :root { –color-primary: #143f69; –color-secondary: #636366; –color-background: #ffffff; –color-text: #000000; }
 
-[data-theme=“dark”] { –color-primary: #143f69; –color-secondary: #636366; –color-background: #001c37f2; –color-text: #ffffff; }
-
-.mdc-top-app-bar {background-color: var(–color-primary);} .help-button {color: var(–color-primary) !important;} .container-downloads > .mdc-button {margin: 3px;color: var(–color-text);} .title {margin: 0;color: var(–color-text);} .slogan {margin: 0px;margin-bottom: 18px;font-weight: 400;color: var(–color-secondary);} body { background-image:url(https://thatskymusic.gitee.io/main/images/bg.webp); background-repeat: no-repeat; background-size: cover; background-position: center; background-color: var(–color-background); } </style>
-
-<script> let userPrefersDark = window.matchMedia && window.matchMedia(‘(prefers-color-scheme: dark)’).matches;
+<script>
+let userPrefersDark = window.matchMedia && window.matchMedia("(prefers-color-scheme: dark)").matches;
 
 let userLanguage = navigator.language || navigator.userLanguage;
 
 let root = document.documentElement;
 
-let langElements = document.querySelectorAll(“[lang]”);
+let langElements = document.querySelectorAll("[lang]");
 
-let langDict = { “APP_NAME”: { “en”: “Sky Music”, “zh”: “光遇音乐” }, “APP_SLOGAN”: { “en”: “Sky Instruments Practice Tool”, “zh”: “光遇乐器练习工具” }, “OTHER_DL”: { “en”: “Download Link”, “zh”: “下载链接” }, “QQCHANEL”: { “en”: “QQ Channel”, “zh”: “QQ频道” }, “FORUM”: { “en”: “Enter Forum”, “zh”: “进入论坛” }, “HELP”: { “en”: “Tutorial”, “zh”: “使用教程” } };
+let langDict = {
+  "APP_NAME": {
+    "en": "Sky Music",
+    "zh": "光遇音乐"
+  },
+  "APP_SLOGAN": {
+    "en": "Sky Instruments Practice Tool",
+    "zh": "光遇乐器练习工具"
+  },
+  "OTHER_DL": {
+    "en": "Download Link",
+    "zh": "下载链接"
+  },
+  "QQCHANEL": {
+    "en": "QQ Channel",
+    "zh": "QQ频道"
+  },
+  "FORUM": {
+    "en": "Enter Forum",
+    "zh": "进入论坛"
+  },
+  "HELP": {
+    "en": "Tutorial",
+    "zh": "使用教程"
+  }
+};
 
-function toggleTheme() {if (root.getAttribute(“data-theme”) === “dark”) { root.setAttribute(“data-theme”, “light”); userPrefersDark = false; } else { root.setAttribute(“data-theme”, “dark”); userPrefersDark = true; } }
+function toggleTheme() {
+  if (root.getAttribute("data-theme") === "dark") {
+    root.setAttribute("data-theme", "light");
+    userPrefersDark = false;
+  } else {
+    root.setAttribute("data-theme", "dark");
+    userPrefersDark = true;
+  }
+}
 
-function toggleLanguage() { if (userLanguage === “zh”) { userLanguage = “en”; } else { userLanguage = “zh”; }
+function toggleLanguage() {
+  if (userLanguage === "zh") {
+    userLanguage = "en";
+  } else {
+    userLanguage = "zh";
+  }
 
-for (let element of langElements) { let key = element.getAttribute(“lang”); let value = langDict[key][userLanguage]; element.textContent = value; } }
+  for (let element of langElements) {
+    let key = element.getAttribute("lang");
+    let value = langDict[key][userLanguage];
+    element.textContent = value;
+  }
+}
 
-if (userPrefersDark) { root.setAttribute(“data-theme”, “dark”); } else { root.setAttribute(“data-theme”, “light”); }
+if (userPrefersDark) {
+  root.setAttribute("data-theme", "dark");
+} else {
+  root.setAttribute("data-theme", "light");
+}
 
-if (userLanguage.startsWith(“zh”)) { userLanguage = “zh”; } else { userLanguage = “en”; }
+if (userLanguage.startsWith("zh")) {
+  userLanguage = "zh";
+} else {
+  userLanguage = "en";
+}
 
-for (let element of langElements) { let key = element.getAttribute(“lang”); let value = langDict[key][userLanguage]; element.textContent = value; } </script>
+for (let element of langElements) {
+  let key = element.getAttribute("lang");
+  let value = langDict[key][userLanguage];
+  element.textContent = value;
+}
+</script>
+
+
     <!-- Global site tag (gtag.js) - Google Analytics -->
     <!--<script async src="https://www.googletagmanager.com/gtag/js?id=G-CRCJGRJ3FB"></script>
     <script>
@@ -117,7 +191,7 @@ for (let element of langElements) { let key = element.getAttribute(“lang”); 
                     <span class="mdc-button__ripple"></span>
                     <span class="mdc-button__focus-ring"></span>
                     <i class="material-icons mdc-button__icon" aria-hidden="true">help</i>
-                    <span class="title lang" key="HELP">使用教程</span>
+                    <span class="title lang" key="HELP" lang="HELP">使用教程</span>
                 </a>
             </section>
         </div>
@@ -129,8 +203,8 @@ for (let element of langElements) { let key = element.getAttribute(“lang”); 
             <img src="images/app-icon-512px.webp" width="192" height="192"/>
         </div>
 
-        <h1 class="mdc-typography--headline4 title lang" key="APP_NAME">光遇音乐</h1>
-        <h6 class="mdc-typography--subtitle1 slogan lang" key="APP_SLOGAN">光遇乐器练习工具</h6>
+        <h1 class="mdc-typography--headline4 title lang" key="APP_NAME" lang="APP_NAME">光遇音乐</h1>
+        <h6 class="mdc-typography--subtitle1 slogan lang" key="APP_SLOGAN" lang="APP_SLOGAN">光遇乐器练习工具</h6>
 
 
         <div class="container-downloads">
@@ -140,7 +214,7 @@ for (let element of langElements) { let key = element.getAttribute(“lang”); 
                 <span class="mdc-button__ripple"></span>
                 <span class="mdc-button__focus-ring"></span>
                 <i class="material-icons mdc-button__icon" aria-hidden="true">file_download</i>
-                <span class="mdc-button__label lang" key="OTHER_DL">下载链接</span>
+                <span class="mdc-button__label lang" key="OTHER_DL" lang="OTHER_DL">下载链接</span>
             </a>
             
             <a href="https://qun.qq.com/qqweb/qunpro/share?_wv=3&_wwv=128&appChannel=share&inviteCode=1W4EVNS&appChannel=share&businessType=9&from=246610&biz=ka" 
@@ -149,7 +223,7 @@ for (let element of langElements) { let key = element.getAttribute(“lang”); 
                 <span class="mdc-button__ripple"></span>
                 <span class="mdc-button__focus-ring"></span>
                 <i class="material-icons mdc-button__icon" aria-hidden="true">tag</i>
-                <span class="mdc-button__label lang" key="QQCHANEL">QQ频道</span>
+                <span class="mdc-button__label lang" key="QQCHANEL" lang="QQCHANEL">QQ频道</span>
             </a>
             
             <a href="https://froum.starsriverorg.cn/" 
@@ -157,7 +231,7 @@ for (let element of langElements) { let key = element.getAttribute(“lang”); 
                 <span class="mdc-button__ripple"></span>
                 <span class="mdc-button__focus-ring"></span>
                 <i class="material-icons mdc-button__icon" aria-hidden="false">sms</i>
-                <span class="mdc-button__label lang" key="FORUM">进入论坛</span>
+                <span class="mdc-button__label lang" key="FORUM" lang="FORUM">进入论坛</span>
             </a>
             
 
