@@ -1,0 +1,143 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1,shrink-to-fit=no">
+    <meta name="theme-color" content="#143f69">
+
+    <link rel="icon" type="image/ico" href="favicon.ico"/>
+    <title class="lang" key="title">光遇音乐APP - Sky游戏乐器练习工具</title>
+
+    <meta name="keywords" content="that,sky,music,屁琴,光遇,音乐,app,安卓,苹果,大萝北子,叫声,乐器练习,螃蟹叫" />
+    <meta name="description" content="这是手游《Sky·光遇》的乐器练习工具，让你专注于演奏与练习。很好地模拟了游戏里乐器演奏的功能，并在此之上扩展了许多有意思的功能。" />
+    <!--<meta name="baidu-site-verification" content="code-t1A74oaflg" />-->
+    <meta property="og:title" content="光遇音乐app - Sky游戏乐器练习工具" />
+    <meta property="og:description" content="这是手游《Sky·光遇》的乐器练习工具，让你专注于演奏与练习。很好地模拟了游戏里乐器演奏的功能，并在此之上扩展了许多有意思的功能。"/>
+    <meta property="og:image" content="https://thatskymusic.gitee.io/main/images/Screenshot_20220624-4.png" />
+    <meta property="og:image:width" content="512" />
+    <meta property="og:image:height" content="512" />
+
+    <!--<link href="https://fonts.googleapis.com/icon?family=Material+Icons&display=swap" rel="stylesheet">-->
+    <!--<link href="https://unpkg.com/material-components-web@latest/dist/material-components-web.min.css" rel="stylesheet">-->
+    <link href="https://thatskymusic.gitee.io/main/material-components-web@14.0.0/dist/material-components-web.min.css" rel="stylesheet">
+    <!--<script src="https://unpkg.com/material-components-web@latest/dist/material-components-web.min.js"></script>-->
+    <link href="https://thatskymusic.gitee.io/main/material-components-web@14.0.0/dist/material-components-web.min.js" rel="stylesheet">
+    <style>
+        @font-face {
+            font-family: 'Material Icons';
+            font-style: normal;
+            font-weight: 400;
+            font-display: swap;
+            src: url(https://fonts.gstatic.com/s/materialicons/v134/flUhRq6tzZclQEJ-Vdg-IuiaDsNcIhQ8tQ.woff2) format('woff2');
+        }
+        .material-icons {
+            font-family: 'Material Icons';
+            font-weight: normal;
+            font-style: normal;
+            font-size: 24px;
+            line-height: 1;
+            letter-spacing: normal;
+            text-transform: none;
+            display: inline-block;
+            white-space: nowrap;
+            word-wrap: normal;
+            direction: ltr;
+            -webkit-font-feature-settings: 'liga';
+            -webkit-font-smoothing: antialiased;
+        }
+        .mdc-top-app-bar {--mdc-theme-primary: #143f6900;}
+        .help-button {color: #143f69 !important;}
+        .container-downloads > .mdc-button {margin: 3px;--mdc-theme-primary: #000;}
+        .container-downloads {text-align:center;margin-left: 10vw;margin-right: 10vw;}
+        .title {margin: 0;}
+        .slogan {margin: 0px;margin-bottom: 18px;font-weight: 400;color: #636366;}
+        body, html {height:100%;width: 100%;margin: 0%;}
+        body {
+            background-image:url(https://thatskymusic.gitee.io/main/images/bg.webp);
+            background-repeat: no-repeat;
+            background-size: cover;
+            background-position: center;
+            /* background-color: #001c37f2; */
+            backdrop-filter:blur(2px);
+        }
+        .main {display: flex; justify-content: center; align-items:center;width: 
+            100%;height: 100%;flex-direction: column;}
+    </style>
+    <!-- Global site tag (gtag.js) - Google Analytics -->
+    <!--<script async src="https://www.googletagmanager.com/gtag/js?id=G-CRCJGRJ3FB"></script>
+    <script>
+        document.addEventListener("DOMContentLoaded", function () {
+            var elements = document.getElementsByClassName("mdc-button")
+            for(var i=0;i < elements.length;i++) {
+                mdc.ripple.MDCRipple.attachTo(elements[i])
+            }
+        });
+        window.dataLayer = window.dataLayer || [];
+        function gtag(){dataLayer.push(arguments);}
+        gtag('js', new Date());
+        gtag('config', 'G-CRCJGRJ3FB');
+    </script>-->
+</head>
+<body>
+    <noscript>You need to enable JavaScript to run this app.</noscript>
+
+    <header class="mdc-top-app-bar">
+        <div class="mdc-top-app-bar__row">
+            <section class="mdc-top-app-bar__section mdc-top-app-bar__section--align-end">
+                <a href="https://froum.starsriverorg.cn/t/Help" 
+                class="mdc-button help-button" >
+                    <span class="mdc-button__ripple"></span>
+                    <span class="mdc-button__focus-ring"></span>
+                    <i class="material-icons mdc-button__icon" aria-hidden="true">help</i>
+                    <span class="title lang" key="HELP">使用教程</span>
+                </a>
+            </section>
+        </div>
+    </header>
+
+    <div class="main">
+
+        <div style="margin: 18px;">
+            <img src="images/app-icon-512px.webp" width="192" height="192"/>
+        </div>
+
+        <h1 class="mdc-typography--headline4 title lang" key="APP_NAME">光遇音乐</h1>
+        <h6 class="mdc-typography--subtitle1 slogan lang" key="APP_SLOGAN">光遇乐器练习工具</h6>
+
+
+        <div class="container-downloads">
+
+            <a href="https://froum.starsriverorg.cn/d/8-qi-ta-ping-tai-windowsmacosios-an-zhuang-bao-xia-zai" 
+            class="mdc-button mdc-button--outlined backdrop-blur" >
+                <span class="mdc-button__ripple"></span>
+                <span class="mdc-button__focus-ring"></span>
+                <i class="material-icons mdc-button__icon" aria-hidden="true">file_download</i>
+                <span class="mdc-button__label lang" key="OTHER_DL">下载链接</span>
+            </a>
+            
+            <a href="https://qun.qq.com/qqweb/qunpro/share?_wv=3&_wwv=128&appChannel=share&inviteCode=1W4EVNS&appChannel=share&businessType=9&from=246610&biz=ka" 
+            target="_blank" 
+            class="mdc-button mdc-button--outlined backdrop-blur" >
+                <span class="mdc-button__ripple"></span>
+                <span class="mdc-button__focus-ring"></span>
+                <i class="material-icons mdc-button__icon" aria-hidden="true">tag</i>
+                <span class="mdc-button__label lang" key="QQCHANEL">QQ频道</span>
+            </a>
+            
+            <a href="https://froum.starsriverorg.cn/" 
+            class="mdc-button mdc-button--outlined backdrop-blur" >
+                <span class="mdc-button__ripple"></span>
+                <span class="mdc-button__focus-ring"></span>
+                <i class="material-icons mdc-button__icon" aria-hidden="false">sms</i>
+                <span class="mdc-button__label lang" key="FORUM">进入论坛</span>
+            </a>
+            
+
+        </div>
+
+    </div>
+</body>
+
+</html>
+
